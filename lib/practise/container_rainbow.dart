@@ -16,11 +16,21 @@ class ContainerRainbow extends StatelessWidget {
       Color.fromRGBO(232, 79, 54, 1),
     ];
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            colors: colors,
-            tileMode: TileMode.decal,
+      body: Center(
+        child: Container(
+          // height: 200,
+          // width: 200,
+          decoration: BoxDecoration(
+            border: Border.all(),
+            borderRadius: BorderRadius.circular(20),
+            gradient: RadialGradient(
+              // center: Alignment.bottomLeft,
+              // radius: 1.37,
+              colors: colors,
+              tileMode: TileMode.decal,
+              transform: GradientRotation(50),
+              // stops: [0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6],
+            ),
           ),
         ),
       ),

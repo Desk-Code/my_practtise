@@ -26,16 +26,16 @@ class ContainerDemo extends StatelessWidget {
             //   // Radius.circular(30),
             //   Radius.elliptical(20, 30),
             // ),
-            borderRadius:
-                // const BorderRadius.circular(20),
-                // const BorderRadius.vertical(bottom: Radius.circular(20)),
-                const BorderRadius.horizontal(right: Radius.circular(10)),
+            // borderRadius:
+            //     // const BorderRadius.circular(20),
+            //     // const BorderRadius.vertical(bottom: Radius.circular(20)),
+            //     const BorderRadius.horizontal(right: Radius.circular(10)),
             image: const DecorationImage(
               image: NetworkImage(
                 "https://m.media-amazon.com/images/I/61lfthIflfL._SX522_.jpg",
               ),
               alignment: Alignment.center,
-              // colorFilter: ColorFilter.srgbToLinearGamma(),
+              //  colorFilter: ColorFilter.srgbToLinearGamma(),
               filterQuality: FilterQuality.medium,
               fit: BoxFit.fill,
               // invertColors: true,
@@ -49,11 +49,27 @@ class ContainerDemo extends StatelessWidget {
               end: Alignment.topLeft,
               stops: [0.7, 0.3],
             ),
+            shape: BoxShape.circle,
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 10.0,
+                spreadRadius: 10,
+                offset: Offset(5, 10),
+              ),
+              BoxShadow(
+                color: Colors.yellowAccent,
+                blurRadius: 10.0,
+                spreadRadius: 10,
+                offset: Offset(10, -10),
+              ),
+            ],
           ),
           // transform: Matrix4.rotationZ(-50.0),
           // transform: Matrix4.translationValues(50, 0, 0),
           transform: Matrix4.skew(50, -50),
           transformAlignment: Alignment.center,
+          // constraints: BoxConstraints.tight(Size.fromWidth(500)),
           child: const Text(
             "Harsh Sangani",
           ),
