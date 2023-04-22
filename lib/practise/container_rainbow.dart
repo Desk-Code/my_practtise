@@ -28,7 +28,7 @@ class ContainerRainbow extends StatelessWidget {
               // radius: 1.37,
               colors: colors,
               tileMode: TileMode.decal,
-              transform: GradientRotation(50),
+              transform: const GradientRotation(50),
               // stops: [0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6],
             ),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/container_demo.dart';
-import 'package:my_practtise/practise/container_rainbow.dart';
+import 'package:my_practtise/icon_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ContainerDemo(),
+      home: IconDemo(),
     );
   }
 }
