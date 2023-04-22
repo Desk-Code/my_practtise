@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'container_demo.dart';
+import 'package:my_practtise/container_demo.dart';
 
 void main() {
   runApp(const MyApp());
