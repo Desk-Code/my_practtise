@@ -464,8 +464,8 @@ class Ui2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: 70,
-                width: 70,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(8),
@@ -481,12 +481,12 @@ class Ui2 extends StatelessWidget {
                 child: Icon(
                   Icons.home_outlined,
                   color: Colors.deepPurple[700],
-                  size: 50,
+                  size: 25,
                 ),
               ),
               Container(
-                height: 70,
-                width: 70,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(8),
@@ -502,12 +502,12 @@ class Ui2 extends StatelessWidget {
                 child: Icon(
                   Icons.search,
                   color: Colors.deepPurple[700],
-                  size: 50,
+                  size: 25,
                 ),
               ),
               Container(
-                height: 70,
-                width: 70,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(8),
@@ -523,12 +523,12 @@ class Ui2 extends StatelessWidget {
                 child: Icon(
                   Icons.add_box,
                   color: Colors.deepPurple[700],
-                  size: 50,
+                  size: 25,
                 ),
               ),
               Container(
-                height: 70,
-                width: 70,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(8),
@@ -544,12 +544,12 @@ class Ui2 extends StatelessWidget {
                 child: Icon(
                   Icons.bookmark_border,
                   color: Colors.deepPurple[700],
-                  size: 50,
+                  size: 25,
                 ),
               ),
               Container(
-                height: 70,
-                width: 70,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(8),
@@ -565,7 +565,7 @@ class Ui2 extends StatelessWidget {
                 child: Icon(
                   Icons.more_horiz_outlined,
                   color: Colors.deepPurple[700],
-                  size: 50,
+                  size: 25,
                 ),
               ),
             ],
