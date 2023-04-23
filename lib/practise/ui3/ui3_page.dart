@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Ui3 extends StatelessWidget {
-  const Ui3({super.key});
+class Ui3Page extends StatelessWidget {
+  const Ui3Page({super.key});
   @override
   Widget build(BuildContext context) {
     double height = 784 / 6, width = 500;
