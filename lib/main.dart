@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/practise/ui2/ui2_page.dart';
+import 'package:my_practtise/practise/ui3/ui3_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Ui2(),
+      home: Ui3(),
     );
   }
 }
