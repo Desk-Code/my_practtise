@@ -5,54 +5,36 @@ class NeumophismPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color backgroundColor = const Color(0xFFE7ECEF);
-    Offset distance = const Offset(28, 28);
-    double blur = 30.0;
     return Scaffold(
-      backgroundColor: backgroundColor,
       body: Center(
         child: Container(
+          width: 200,
+          height: 200,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: Colors.transparent,
-            boxShadow: [
-              // BoxShadow(
-              //   blurRadius: blur,
-              //   offset: -distance,
-              //   color: Colors.white,
-              // ),
-              // BoxShadow(
-              //   blurRadius: blur,
-              //   offset: distance,
-              //   color: const Color(0xFFA7A9AF),
-              // ),
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(
-                  -2,
-                  -2,
-                ),
-                blurRadius: 1,
+              gradient: const LinearGradient(
+                begin: Alignment(-1, 1),
+                end: Alignment(1, 1),
+                colors: [
+                  Color(0xFFE6E6E6),
+                  Color(0xFFFFFFFF),
+                ],
               ),
-              BoxShadow(
-                color: backgroundColor,
-                blurRadius: 5,
-                spreadRadius: -5,
-                offset: Offset(-200, -200),
-              ),
-
-              BoxShadow(
-                color: backgroundColor,
-                blurRadius: 8,
-                spreadRadius: -5,
-                offset: Offset(-1, -1),
-              ),
-            ],
-          ),
-          child: const SizedBox(
-            height: 200,
-            width: 200,
-          ),
+              borderRadius: BorderRadius.circular(40),
+              boxShadow: const [
+                BoxShadow(
+                    color: Color(0xffcccccc),
+                    blurRadius: 40,
+                    offset: Offset(20, 20)),
+                BoxShadow(
+                    color: Color(0xffffffff),
+                    blurRadius: 40,
+                    offset: Offset(-20, -20))
+              ]),
+          child: const Center(
+              child: Icon(
+            Icons.android,
+            size: 50,
+          )),
         ),
       ),
     );

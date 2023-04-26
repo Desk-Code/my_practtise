@@ -16,13 +16,13 @@ class NeumorphismPage extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.shade500,
-                offset: const Offset(5, 5),
+                offset: const Offset(-5, -5),
                 spreadRadius: 1.0,
                 blurRadius: 15.0,
               ),
               const BoxShadow(
                 color: Colors.white,
-                offset: Offset(-5, -5),
+                offset: Offset(5, 5),
                 spreadRadius: 1.0,
                 blurRadius: 15.0,
               ),
