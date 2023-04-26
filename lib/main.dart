@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/practise/ui6/ui6_page.dart';
+import 'package:my_practtise/bottom_navigationbar_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Ui6Page(),
+      debugShowCheckedModeBanner: false,
+      home: BottomNavigationBarDemo(),
     );
   }
 }
