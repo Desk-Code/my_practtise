@@ -6,8 +6,9 @@ class BottomNavigationBarDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      bottomNavigationBar: SizedBox(
+      backgroundColor: Colors.green[100],
+      bottomNavigationBar: Container(
+        color: Colors.red,
         height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

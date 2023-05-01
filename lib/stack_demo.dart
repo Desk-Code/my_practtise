@@ -6,25 +6,29 @@ class StackDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          color: Colors.red,
-          height: 100,
-          width: 100,
+      body: Center(
+        child: Stack(
+          fit: StackFit.passthrough,
+          alignment: Alignment.center,
+          children: [
+            Container(
+              color: Colors.red,
+              height: 300,
+              width: 300,
+            ),
+            Container(
+              width: 250,
+              height: 250,
+              color: Colors.green,
+            ),
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.blue,
+            ),
+          ],
         ),
-        Container(
-          margin: const EdgeInsets.only(top: 10),
-          width: 100,
-          height: 100,
-          color: Colors.green,
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: 100,
-          height: 100,
-          color: Colors.blue,
-        ),
-      ]),
+      ),
     );
   }
 }
