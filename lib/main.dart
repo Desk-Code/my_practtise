@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/custom_font_demo.dart';
+import 'package:my_practtise/practise/ui11/ui11_product_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomFontDemo(),
+      home: Ui11ProductPage(),
     );
   }
 }
