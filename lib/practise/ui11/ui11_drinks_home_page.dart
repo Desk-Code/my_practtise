@@ -7,8 +7,23 @@ class Ui11HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget commonIconList({
       required IconData icon,
+      bool isSelected = false,
     }) =>
-        Container();
+        Container(
+          height: 25,
+          width: 25,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: isSelected ? Colors.orange : Colors.grey,
+          ),
+          alignment: Alignment.center,
+          child: isSelected
+              ? Icon(
+                  icon,
+                  size: 10,
+                )
+              : Icon(icon, size: 20),
+        );
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -223,6 +238,7 @@ class Ui11HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            commonIconList(icon: Icons.add, isSelected: true),
           ],
         ),
       ),
