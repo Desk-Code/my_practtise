@@ -22,9 +22,9 @@ class BedRoomPage extends StatelessWidget {
         // leadingWidth: 35,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(11.0),
+        padding: const EdgeInsets.all(27),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -80,10 +80,10 @@ class BedRoomPage extends StatelessWidget {
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        spreadRadius: 25.0,
-                        color: Colors.deepPurple.shade200,
-                        blurRadius: 200,
-                      ),
+                          spreadRadius: 5.0,
+                          color: Colors.deepPurple.shade200,
+                          blurRadius: 200,
+                          offset: const Offset(0, 10)),
                     ],
                   ),
                 ),
@@ -147,6 +147,120 @@ class BedRoomPage extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Current temprature",
+                      style: TextStyle(
+                        color: Colors.grey.shade400,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        const Text(
+                          '18.5',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '°C',
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Current humidity",
+                      style: TextStyle(
+                        color: Colors.grey.shade400,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      '60%',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              child: Column(
+                children: [
+                  Text(
+                    'Turn On/off',
+                    style: TextStyle(
+                      color: Colors.grey.shade400,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Container(
+                    height: 27,
+                    width: 65,
+                    margin: const EdgeInsets.all(7),
+                    padding: const EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple.shade800,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    alignment: Alignment.centerRight,
+                    child: Container(
+                      height: 20,
+                      width: 20,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 50,
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.deepPurple.shade800,
+                borderRadius: BorderRadius.circular(13),
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                'Set temperature',
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.90),
+                  fontSize: 17,
+                ),
+              ),
             ),
           ],
         ),
