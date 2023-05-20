@@ -78,3 +78,18 @@ class ContainerDemo extends StatelessWidget {
     );
   }
 }
+
+
+
+// Transform.rotate(
+//           angle: 180 * (22 / 7) / 180,
+//           child: Container(
+//             height: 150,
+//             width: 20,
+//             color: Colors.yellow,
+//             alignment: Alignment.center,
+//             child: VerticalDivider(
+//               color: Colors.red,
+//             ),
+//           ),
+//         ),
