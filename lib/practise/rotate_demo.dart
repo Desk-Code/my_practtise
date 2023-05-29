@@ -20,9 +20,7 @@ class _RotateDemoState extends State<RotateDemo> {
             if (angle >= 360) {
               angle = 0;
             }
-            setState(() {
-              print(angle);
-            });
+            setState(() {});
           },
           child: Transform.rotate(
             angle: angle * (22 / 7) / 180,

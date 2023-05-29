@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/practise/ui14_credit_card/screens/home_page/home_page.dart';
+import 'package:my_practtise/practise/practise_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UI14HomePage(),
+      home: PractisePage(),
     );
   }
 }
