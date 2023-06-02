@@ -1,14 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:my_practtise/practise/gmail/gmail_drawer_widgets.dart';
 
-class GmailDrawerPage extends StatelessWidget {
+class GmailDrawerPage extends StatefulWidget {
   const GmailDrawerPage({super.key});
+
+  @override
+  State<GmailDrawerPage> createState() => _GmailDrawerPageState();
+}
+
+class _GmailDrawerPageState extends State<GmailDrawerPage> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  IconData icons = Icons.circle;
+  String name = 'Active';
+  Color colorIcon = Colors.green;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       drawer: Drawer(
+        surfaceTintColor: Colors.green,
+        elevation: 50,
+        // semanticLabel: "Hello",
+        shadowColor: Colors.red,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10))),
         backgroundColor: Colors.lightBlue.shade50,
         child: SingleChildScrollView(
           child: Column(
@@ -22,12 +39,79 @@ class GmailDrawerPage extends StatelessWidget {
                 child: commonGmailDrawerText(
                     text: "Gmail", color: Colors.red, size: 25),
               ),
-              const Divider(thickness: 1.5),
+              const Divider(),
+              ExpansionTile(
+                title: Text(name),
+                leading: Icon(
+                  icons,
+                  color: colorIcon,
+                ),
+                childrenPadding: const EdgeInsets.only(left: 60),
+                children: [
+                  ListTile(
+                    title: const Text(
+                      "Automatic",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    subtitle: const Text(
+                      "Based onn chat activity",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                    leading: Icon(
+                      Icons.circle,
+                      color: Colors.green.shade800,
+                    ),
+                    onTap: () {
+                      icons = Icons.circle;
+                      name = "Active";
+                      colorIcon = Colors.green.shade800;
+                      setState(() {});
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      "Do not disturb",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    subtitle: const Text(
+                      "Mute chat notification",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                    leading: Icon(
+                      Icons.do_not_disturb_on_rounded,
+                      color: Colors.red.shade800,
+                    ),
+                    onTap: () {
+                      icons = Icons.do_not_disturb_on_rounded;
+                      name = "Disturb";
+                      colorIcon = Colors.red.shade800;
+                      setState(() {});
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      "Set as away",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    leading: Icon(
+                      Icons.circle_outlined,
+                      color: Colors.grey.shade800,
+                    ),
+                    onTap: () {
+                      icons = Icons.circle_outlined;
+                      name = "Away";
+                      colorIcon = Colors.grey.shade800;
+                      setState(() {});
+                    },
+                  ),
+                ],
+              ),
               commonGmailTile(icon: Icons.edit, name: "Add a status"),
               const Divider(),
               commonGmailTile(icon: Icons.all_inbox, name: "All inboxes"),
               const Divider(),
-              commonGmailTile(icon: Icons.inbox, name: "Primary"),
+              commonGmailTile(
+                  icon: Icons.inbox, name: "Primary", numOfMessage: "359"),
               commonGmailTile(icon: Icons.sell_outlined, name: "Promotions"),
               commonGmailTile(icon: Icons.group_outlined, name: "Social"),
               commonGmailDrawerText(

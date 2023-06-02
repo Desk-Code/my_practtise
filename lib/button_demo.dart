@@ -9,16 +9,22 @@ class ButtonDemo extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          MaterialButton(
-            onPressed: () {
-              print("hiiii, I am Material Button");
-            },
-            child: const Text("Material Button"),
+          const MaterialButton(
+            color: Colors.indigo,
+            disabledColor: Colors.green,
+            disabledTextColor: Colors.white,
+            highlightColor: Colors.purple,
+            hoverColor: Colors.pink,
+            minWidth: 150,
+            textColor: Colors.white,
+            onPressed: null,
+            child: Text("Material Button"),
           ),
           ElevatedButton(
             onPressed: () {
               print("Hiii, I am Elevated Button");
             },
+            // style: ButtonStyle(),
             child: const Text("Elevated Button"),
           ),
           TextButton(
@@ -98,6 +104,9 @@ class ButtonDemo extends StatelessWidget {
                 builder: (context) {
                   return Container();
                 },
+                barrierColor: Colors.yellow,
+                isDismissible: true,
+                useSafeArea: true,
               );
             },
             child: const Text("Open Bottom Sheet"),
@@ -105,8 +114,16 @@ class ButtonDemo extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text("SnackBar Data"),
+                SnackBar(
+                  content: const Text("SnackBar Data"),
+                  action: SnackBarAction(
+                    label: "Hello",
+                    onPressed: () {},
+                  ),
+                  showCloseIcon: true,
+                  closeIconColor: Colors.amber,
+                  dismissDirection: DismissDirection.horizontal,
+                  duration: const Duration(seconds: 5),
                 ),
               );
             },
@@ -115,6 +132,16 @@ class ButtonDemo extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
+        // elevation: 50,
+        // disabledElevation: 50,
+        // focusColor: Colors.green,
+        hoverColor: Colors.green,
+        isExtended: false,
+        mini: false,
+// shape: RoundedRectangleBorder(),
+        splashColor: Colors.indigo,
+        tooltip: "This is a Floting Button",
         onPressed: () {
           print("hii, I am Floting Action Button ");
         },
