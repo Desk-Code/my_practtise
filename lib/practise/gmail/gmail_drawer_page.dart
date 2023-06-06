@@ -18,7 +18,16 @@ class _GmailDrawerPageState extends State<GmailDrawerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          Builder(builder: (context) {
+            return ElevatedButton(
+              onPressed: () => Scaffold.of(context).openEndDrawer(),
+              child: const Text("End Drawer"),
+            );
+          }),
+        ],
+      ),
       drawer: Drawer(
         surfaceTintColor: Colors.green,
         elevation: 50,
