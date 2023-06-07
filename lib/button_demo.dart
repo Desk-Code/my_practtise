@@ -22,26 +22,26 @@ class ButtonDemo extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              print("Hiii, I am Elevated Button");
+              // print("Hiii, I am Elevated Button");
             },
             // style: ButtonStyle(),
             child: const Text("Elevated Button"),
           ),
           TextButton(
             onPressed: () {
-              print("Hiii, I am Text Button");
+              // print("Hiii, I am Text Button");
             },
             child: const Text("Text Button"),
           ),
           IconButton(
             onPressed: () {
-              print("Hii, I am Icon Button");
+              // print("Hii, I am Icon Button");
             },
             icon: const Icon(Icons.settings_ethernet),
           ),
           OutlinedButton(
             onPressed: () {
-              print("hiii, I am Outlined Button");
+              // print("hiii, I am Outlined Button");
             },
             child: const Text("Outlined Button"),
           ),
@@ -72,13 +72,13 @@ class ButtonDemo extends StatelessWidget {
           // ),
           GestureDetector(
             onTap: () {
-              print("Hiiii, I am tapable Container");
+              // print("Hiiii, I am tapable Container");
             },
             onDoubleTap: () {
-              print("hiiii, I am Double Tap Event");
+              // print("hiiii, I am Double Tap Event");
             },
             onLongPress: () {
-              print("Hiii, I am Long Press Event");
+              // print("Hiii, I am Long Press Event");
             },
             child: Card(
               elevation: 20,
@@ -143,7 +143,7 @@ class ButtonDemo extends StatelessWidget {
         splashColor: Colors.indigo,
         tooltip: "This is a Floting Button",
         onPressed: () {
-          print("hii, I am Floting Action Button ");
+          // print("hii, I am Floting Action Button ");
         },
         child: const Icon(Icons.add),
       ),

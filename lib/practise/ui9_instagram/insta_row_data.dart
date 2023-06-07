@@ -1,3 +1,5 @@
+import 'package:my_practtise/practise/ui9_instagram/insta_model_class.dart';
+
 List<Map<String, dynamic>> instaRowData = [
   {
     "name": "Harsh",
@@ -50,3 +52,5 @@ List<Map<String, dynamic>> instaRowData = [
         "https://images.unsplash.com/photo-1606587013317-cc43fa98a123?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
 ];
+
+List<InstaModel> instaData = [];

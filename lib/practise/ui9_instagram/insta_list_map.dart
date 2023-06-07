@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_practtise/practise/ui9_instagram/insta_model_class.dart';
 import 'package:my_practtise/practise/ui9_instagram/insta_row_data.dart';
 
 class InstaDemoPage extends StatelessWidget {
@@ -6,6 +7,9 @@ class InstaDemoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    for (var ele in instaRowData) {
+      instaData.add(InstaModel.fromJson(ele));
+    }
     return Scaffold(
       backgroundColor: Colors.black87,
       appBar: AppBar(
@@ -13,9 +17,9 @@ class InstaDemoPage extends StatelessWidget {
         title: const Text(
           "Instagram",
           style: TextStyle(
-            color: Colors.white70,
-            fontSize: 25,
-          ),
+              color: Colors.white70,
+              fontSize: 25,
+              fontFamily: "Dancing Script"),
         ),
         actions: const [
           Icon(
@@ -78,7 +82,7 @@ class InstaDemoPage extends StatelessWidget {
                   ),
                 ),
                 ...List.generate(
-                  instaRowData.length,
+                  instaData.length,
                   (index) => Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
@@ -113,8 +117,7 @@ class InstaDemoPage extends StatelessWidget {
                                     color: Colors.grey.shade900, width: 4),
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image:
-                                      NetworkImage(instaRowData[index]["url"]),
+                                  image: NetworkImage(instaData[index].url!),
                                   fit: BoxFit.fitWidth,
                                 ),
                               ),
@@ -122,7 +125,7 @@ class InstaDemoPage extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          instaRowData[index]["name"],
+                          instaData[index].name!,
                           style: const TextStyle(
                             color: Colors.white70,
                             height: 1.5,
@@ -176,7 +179,7 @@ class InstaDemoPage extends StatelessWidget {
         child: Column(
           children: [
             ...List.generate(
-              instaRowData.length,
+              instaData.length,
               (index) => Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -185,7 +188,7 @@ class InstaDemoPage extends StatelessWidget {
                       CircleAvatar(
                         radius: 18,
                         backgroundImage: NetworkImage(
-                          instaRowData[index]["url"],
+                          instaData[index].url!,
                         ),
                       ),
                       const SizedBox(
@@ -193,7 +196,7 @@ class InstaDemoPage extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(
-                          instaRowData[index]["name"],
+                          instaData[index].name!,
                           style: const TextStyle(
                             color: Colors.white,
                           ),

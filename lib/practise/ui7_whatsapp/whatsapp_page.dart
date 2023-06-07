@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_practtise/practise/ui7_whatsapp/Screens/calls_page.dart';
-import 'package:my_practtise/practise/ui7_whatsapp/Screens/chat_page.dart';
+import 'package:my_practtise/practise/ui7_whatsapp/Screens/model_whatsapp.dart';
 import 'package:my_practtise/practise/ui7_whatsapp/Screens/status_page.dart';
 
 class WhtasappPage extends StatefulWidget {
@@ -13,7 +13,7 @@ class WhtasappPage extends StatefulWidget {
 class _WhtasappPageState extends State<WhtasappPage> {
   int index = 0;
   List screens = [
-    const ChatPageWhatsapp(),
+    const ModelWhatsapp(),
     const WhatsappStatusPage(),
     const WhatsappCallsPage()
   ];

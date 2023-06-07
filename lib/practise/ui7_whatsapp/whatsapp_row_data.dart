@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_practtise/practise/ui7_whatsapp/whatsapp_model.dart';
 
 List<Map<String, dynamic>> rowData = [
   {
@@ -128,3 +129,5 @@ List<Map<String, dynamic>> rowData = [
     "icon": Icons.video_call
   },
 ];
+
+List<Whatsapp> whatsappData = [];
