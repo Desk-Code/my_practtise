@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/practise/ui9_instagram/insta_list_map.dart';
+import 'package:my_practtise/practise/gmail/gmail_modal_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: InstaDemoPage(),
+      home: GmailModalPage(),
     );
   }
 }
