@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/practise/gmail/gmail_modal_page.dart';
+import 'package:my_practtise/grid_view/grid_view_extent.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GmailModalPage(),
+      home: GridViewExtent(),
     );
   }
 }
