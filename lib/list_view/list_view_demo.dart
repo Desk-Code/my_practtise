@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ListViewDemo extends StatelessWidget {
@@ -9,7 +8,7 @@ class ListViewDemo extends StatelessWidget {
     return Scaffold(
       body: ListView(
         scrollDirection: Axis.vertical,
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         // dragStartBehavior: DragStartBehavior.down,
         // itemExtent: 50,
         // keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
