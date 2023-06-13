@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/swap_color/color_change_method.dart';
+import 'package:my_practtise/stateful_example/swap_color/color_change_method.dart';
 
 class GridViewColorChangeUi extends StatefulWidget {
   const GridViewColorChangeUi({super.key});
