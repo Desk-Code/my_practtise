@@ -95,23 +95,27 @@ class _TicToetacPageState extends State<TicToetacPage> {
               ...List.generate(
                 9,
                 (index) => GestureDetector(
-                  onTap: () {
-                    TicToeTac.playerSwapping(index, context);
+                  onTap: () async {
+                    setState(() {});
+                    await TicToeTac.playerSwapping(index, context);
                     setState(() {});
                   },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      value[index],
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 65,
-                        fontWeight: FontWeight.bold,
+                  child: Card(
+                    elevation: elevation[index],
+                    color: cardColor[index],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        side: const BorderSide(
+                          color: Colors.black,
+                        )),
+                    child: Center(
+                      child: Text(
+                        value[index],
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 65,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -131,7 +135,6 @@ class _TicToetacPageState extends State<TicToetacPage> {
                 ),
                 onPressed: () {
                   TicToeTac.clearControl();
-
                   setState(() {});
                 },
                 child: const Text(
@@ -155,8 +158,9 @@ class _TicToetacPageState extends State<TicToetacPage> {
                   playerOCount = 0;
                   playerXCount = 0;
                   drawMatch = 0;
-                  TicToeTac.clearControl();
-                  setState(() {});
+                  setState(() {
+                    TicToeTac.clearControl();
+                  });
                 },
                 child: const Text(
                   "Restart",
