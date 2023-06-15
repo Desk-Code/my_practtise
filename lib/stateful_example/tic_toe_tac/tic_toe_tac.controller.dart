@@ -1,69 +1,57 @@
 import 'package:flutter/material.dart';
 
-String player1 = "Player O";
-String player2 = "Player X";
-bool isActivated = false; // true means player O
-
+List value = ["", "", "", "", "", "", "", "", ""];
+bool xTurn = false; // true means player O
+int fillBox = 0;
 int playerOCount = 0;
 int playerXCount = 0;
 int drawMatch = 0;
 
-List value = ["", "", "", "", "", "", "", "", ""];
-
 class TicToeTac {
   static void clearControl() {
     value = ["", "", "", "", "", "", "", "", ""];
+    fillBox = 0;
   }
 
   static void winnerNumber(context) {
-    (isActivated) ? playerXCount++ : playerOCount++;
-
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content:
-            Text((isActivated) ? "Player X is Winner" : "Player O is Winner")));
+        content: Text((xTurn) ? "Player X is Winner" : "Player O is Winner")));
+    if (xTurn) {
+      playerXCount++;
+      xTurn = !xTurn;
+    } else {
+      playerOCount++;
+      xTurn = !xTurn;
+    }
     clearControl();
   }
 
-  static void playerSwapping(int index) {
-    if (value[index] == "") {
-      if (isActivated == true) {
-        value.removeAt(index);
-        value.insert(index, "O");
-        isActivated = false;
-      } else {
-        value.removeAt(index);
-        value.insert(index, "X");
-        isActivated = true;
-      }
+  static void playerSwapping(int index, context) {
+    if (xTurn && value[index] == "") {
+      value[index] = "O";
+      xTurn = !xTurn;
+      fillBox += 1;
+    } else if (!xTurn && value[index] == "") {
+      value[index] = "X";
+      xTurn = !xTurn;
+      fillBox += 1;
+    }
+    if (fillBox > 4) {
+      winnerState(context);
     }
   }
 
   static void winnerState(context) {
-    if (value[0] == value[1] && value[1] == value[2] && value[0] != "") {
+    if (value[0] == value[1] && value[1] == value[2] && value[0] != "" ||
+        value[3] == value[4] && value[4] == value[5] && value[4] != "" ||
+        value[6] == value[7] && value[7] == value[8] && value[8] != "" ||
+        value[0] == value[3] && value[3] == value[6] && value[0] != "" ||
+        value[1] == value[4] && value[4] == value[7] && value[1] != "" ||
+        value[2] == value[5] && value[5] == value[8] && value[2] != "" ||
+        value[0] == value[4] && value[4] == value[8] && value[0] != "" ||
+        value[2] == value[4] && value[4] == value[6] && value[2] != "") {
       winnerNumber(context);
-    } else if (value[3] == value[4] && value[4] == value[5] && value[4] != "") {
-      winnerNumber(context);
-    } else if (value[6] == value[7] && value[7] == value[8] && value[8] != "") {
-      winnerNumber(context);
-    } else if (value[0] == value[3] && value[3] == value[6] && value[0] != "") {
-      winnerNumber(context);
-    } else if (value[1] == value[4] && value[4] == value[7] && value[1] != "") {
-      winnerNumber(context);
-    } else if (value[2] == value[5] && value[5] == value[8] && value[2] != "") {
-      winnerNumber(context);
-    } else if (value[0] == value[4] && value[4] == value[8] && value[0] != "") {
-      winnerNumber(context);
-    } else if (value[2] == value[4] && value[4] == value[6] && value[2] != "") {
-      winnerNumber(context);
-    } else if (value[0] != "" &&
-        value[1] != "" &&
-        value[2] != "" &&
-        value[3] != "" &&
-        value[4] != "" &&
-        value[5] != "" &&
-        value[6] != "" &&
-        value[7] != "" &&
-        value[8] != "") {
+    } else if (fillBox == 9) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text("Draw Match Play Again..."),

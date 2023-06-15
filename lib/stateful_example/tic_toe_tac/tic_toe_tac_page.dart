@@ -12,6 +12,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -95,8 +96,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                 9,
                 (index) => GestureDetector(
                   onTap: () {
-                    TicToeTac.playerSwapping(index);
-                    TicToeTac.winnerState(context);
+                    TicToeTac.playerSwapping(index, context);
                     setState(() {});
                   },
                   child: Container(
@@ -131,6 +131,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                 ),
                 onPressed: () {
                   TicToeTac.clearControl();
+
                   setState(() {});
                 },
                 child: const Text(
@@ -139,7 +140,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                 ),
               ),
               Text(
-                (isActivated) ? player1 : player2,
+                (xTurn) ? "Player O" : "Player X",
                 style: const TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
