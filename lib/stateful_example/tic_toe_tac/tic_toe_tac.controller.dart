@@ -91,7 +91,6 @@ class TicToeTac {
     switch (choice) {
       case 1:
         await winnerNumber(context);
-
         break;
       case 2:
         ScaffoldMessenger.of(context).showSnackBar(
@@ -105,3 +104,17 @@ class TicToeTac {
     }
   }
 }
+
+
+
+  // _chooseRandom() {
+  //   var random = new Random();
+  //   while (true) {
+  //     var _row = random.nextInt(3);
+  //     var _column = random.nextInt(3);
+
+  //     if (_field[_row][_column].isEmpty) {
+  //       _decision = new Decision(_row, _column);
+  //       break;
+  //     }
+  //   }

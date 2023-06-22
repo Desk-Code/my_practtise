@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/stateful_example/tic_toe_tac/tic_toe_tac_page.dart';
+import 'package:my_practtise/stateful_example_2/check_box_list_tile_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TicToetacPage(),
+      home: CheckBoxListTileDemo(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/stateful_example/tic_toe_tac/tic_toe_tac.controller.dart';
+import 'package:my_practtise/stateful_example/tic_toe_tac/single_player.controller.dart';
+// import 'package:my_practtise/stateful_example/tic_toe_tac/tic_toe_tac.controller.dart';
 
 class TicToetacPage extends StatefulWidget {
   const TicToetacPage({super.key});
@@ -31,7 +32,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                     ),
                   ),
                   Text(
-                    playerOCount.toString(),
+                    TicTacToeSingle.playerOCount.toString(),
                     style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -51,7 +52,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                     ),
                   ),
                   Text(
-                    playerXCount.toString(),
+                    TicTacToeSingle.playerXCount.toString(),
                     style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -71,7 +72,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                     ),
                   ),
                   Text(
-                    drawMatch.toString(),
+                    TicTacToeSingle.drawMatch.toString(),
                     style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -95,14 +96,24 @@ class _TicToetacPageState extends State<TicToetacPage> {
               ...List.generate(
                 9,
                 (index) => GestureDetector(
+                  // onTap: () async {
+                  //   setState(() {});
+                  //   await TicToeTac.playerSwapping(index, context);
+                  //   setState(() {});
+                  // },
                   onTap: () async {
-                    setState(() {});
-                    await TicToeTac.playerSwapping(index, context);
-                    setState(() {});
+                    if (!TicTacToeSingle.xTurn) {
+                      TicTacToeSingle.playerSwap(index, context);
+                      setState(() {});
+                    }
+                    if (TicTacToeSingle.xTurn) {
+                      await TicTacToeSingle.manualAi(context);
+                      setState(() {});
+                    }
                   },
                   child: Card(
-                    elevation: elevation[index],
-                    color: cardColor[index],
+                    // elevation: elevation[index],
+                    color: TicTacToeSingle.cardColor[index],
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: const BorderSide(
@@ -110,7 +121,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                         )),
                     child: Center(
                       child: Text(
-                        value[index],
+                        TicTacToeSingle.value[index],
                         style: const TextStyle(
                           color: Colors.black,
                           fontSize: 65,
@@ -134,7 +145,8 @@ class _TicToetacPageState extends State<TicToetacPage> {
                   backgroundColor: MaterialStatePropertyAll(Colors.grey),
                 ),
                 onPressed: () {
-                  TicToeTac.clearControl();
+                  // TicToeTac.clearControl();
+                  TicTacToeSingle.clearControl();
                   setState(() {});
                 },
                 child: const Text(
@@ -143,7 +155,7 @@ class _TicToetacPageState extends State<TicToetacPage> {
                 ),
               ),
               Text(
-                (xTurn) ? "Player O" : "Player X",
+                (TicTacToeSingle.xTurn) ? "Player O" : "Player X",
                 style: const TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
@@ -155,12 +167,11 @@ class _TicToetacPageState extends State<TicToetacPage> {
                   backgroundColor: MaterialStatePropertyAll(Colors.grey),
                 ),
                 onPressed: () {
-                  playerOCount = 0;
-                  playerXCount = 0;
-                  drawMatch = 0;
-                  setState(() {
-                    TicToeTac.clearControl();
-                  });
+                  TicTacToeSingle.playerOCount = 0;
+                  TicTacToeSingle.playerXCount = 0;
+                  TicTacToeSingle.drawMatch = 0;
+                  TicTacToeSingle.clearControl();
+                  setState(() {});
                 },
                 child: const Text(
                   "Restart",
