@@ -53,8 +53,8 @@ class Ui11ShoppingPage extends StatelessWidget {
               numOfOrder: "1",
               price: "\$9.43",
             ),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 SizedBox(width: 10),
                 Icon(
                   Icons.shopping_bag_outlined,

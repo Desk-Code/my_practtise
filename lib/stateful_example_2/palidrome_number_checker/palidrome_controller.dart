@@ -19,6 +19,7 @@ class Palindrome {
       isPalindromeString = txtIsPalindromeController.text;
     }
   }
+  
 
   static _isPalindromeNumber(int number) {
     int temp = number;

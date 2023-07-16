@@ -8,9 +8,9 @@ class Ui1Page extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text(
                 " \$1200",
                 style: TextStyle(
@@ -34,9 +34,9 @@ class Ui1Page extends StatelessWidget {
                   ),
                   color: Colors.red,
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.search,
                       size: 50,
@@ -60,9 +60,9 @@ class Ui1Page extends StatelessWidget {
                   ),
                   color: Colors.green,
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.money_outlined,
                       size: 50,
@@ -93,9 +93,9 @@ class Ui1Page extends StatelessWidget {
                   ),
                   color: Colors.blue,
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.print,
                       size: 50,
@@ -121,9 +121,9 @@ class Ui1Page extends StatelessWidget {
                     bottomLeft: Radius.circular(30),
                   ),
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.image,
                       size: 50,
@@ -165,9 +165,9 @@ class Ui1Page extends StatelessWidget {
                     size: 35.0,
                   ),
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       "Shell Darwen",
                       style: TextStyle(
@@ -186,9 +186,9 @@ class Ui1Page extends StatelessWidget {
                     ),
                   ],
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       "\$30",
                       style: TextStyle(
@@ -234,9 +234,9 @@ class Ui1Page extends StatelessWidget {
                     size: 35.0,
                   ),
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       "John Doe",
                       style: TextStyle(
@@ -255,9 +255,9 @@ class Ui1Page extends StatelessWidget {
                     ),
                   ],
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       "\$50",
                       style: TextStyle(

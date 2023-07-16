@@ -11,10 +11,10 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
         child: Column(
           children: [
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   "Where would \nyou like to travel?",
                   style: TextStyle(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_practtise/stateful_example_2/palidrome_number_checker/palidrome_number_checker.dart';
+import 'package:my_practtise/stateful_example/animation_demo/my_custom_animation_ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +9,12 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PalidromeNumberChecker(),
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
+      home: const MyCustomAnimationUI(),
     );
   }
 }

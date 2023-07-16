@@ -143,9 +143,9 @@ class InstaDemoPage extends StatelessWidget {
       bottomNavigationBar: Container(
         height: 50,
         color: Colors.black,
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
+          children: [
             Icon(
               Icons.home,
               color: Colors.white,
@@ -225,14 +225,14 @@ class InstaDemoPage extends StatelessWidget {
                     //   fit: BoxFit.fitWidth,
                     // ),
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
                         width: 120,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
+                          children: [
                             Icon(
                               Icons.favorite_border,
                               size: 25,
@@ -251,7 +251,7 @@ class InstaDemoPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.bookmark_border,
                         size: 25,
                         color: Colors.white,

@@ -107,9 +107,9 @@ Widget commonTicket({
               const SizedBox(
                 height: 4,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     '4.26.2021, Tue',
                     style: TextStyle(

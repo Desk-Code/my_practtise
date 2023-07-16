@@ -139,9 +139,9 @@ class Ui9InstaPage extends StatelessWidget {
       bottomNavigationBar: Container(
         height: 50,
         color: Colors.black,
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
+          children: [
             Icon(
               Icons.home,
               color: Colors.white,
@@ -179,8 +179,8 @@ class Ui9InstaPage extends StatelessWidget {
               (index) => Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       CircleAvatar(
                         radius: 18,
                         backgroundImage: NetworkImage(
@@ -222,14 +222,14 @@ class Ui9InstaPage extends StatelessWidget {
                     //   fit: BoxFit.fitWidth,
                     // ),
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
                         width: 120,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
+                          children: [
                             Icon(
                               Icons.favorite_border,
                               size: 25,
@@ -248,7 +248,7 @@ class Ui9InstaPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.bookmark_border,
                         size: 25,
                         color: Colors.white,

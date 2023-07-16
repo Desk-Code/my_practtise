@@ -94,9 +94,9 @@ class Ui1CommonPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [Text('\$1200'), Icon(Icons.menu)],
+            children: [Text('\$1200'), Icon(Icons.menu)],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

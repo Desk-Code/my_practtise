@@ -44,9 +44,9 @@ class _SelectionDisplayDemoState extends State<SelectionDisplayDemo> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   alignment: Alignment.center,
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Icon(
                         Icons.male,
                         size: 25,
@@ -79,9 +79,9 @@ class _SelectionDisplayDemoState extends State<SelectionDisplayDemo> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   alignment: Alignment.center,
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Icon(
                         Icons.female,
                         size: 25,

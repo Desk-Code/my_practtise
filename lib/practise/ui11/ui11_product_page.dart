@@ -73,10 +73,10 @@ class Ui11ProductPage extends StatelessWidget {
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   "Artificial selection      Taste sweet",
                   style: TextStyle(
                     color: Colors.white,
@@ -85,7 +85,7 @@ class Ui11ProductPage extends StatelessWidget {
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.star,
                       color: Colors.white,
@@ -139,9 +139,9 @@ class Ui11ProductPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.shopping_bag_outlined,
                       color: Colors.white70,

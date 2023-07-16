@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "359738354466",
+    "project_id": "login-auth-f15f4",
+    "storage_bucket": "login-auth-f15f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359738354466:android:f664d4928ee0c94291937b",
+        "android_client_info": {
+          "package_name": "com.example.my_practtise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359738354466-hnh8ne0hcs0tcik3uor71dsmpoglaadc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf06QiGfALbNi3qyclp_0tgfOQXrKZ5-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359738354466-hnh8ne0hcs0tcik3uor71dsmpoglaadc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

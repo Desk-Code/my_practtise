@@ -10,6 +10,6 @@ class CrudDemo extends StatefulWidget {
 class _CrudDemoState extends State<CrudDemo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

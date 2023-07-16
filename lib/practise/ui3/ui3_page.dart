@@ -4,7 +4,8 @@ class Ui3Page extends StatelessWidget {
   const Ui3Page({super.key});
   @override
   Widget build(BuildContext context) {
-    double height = 784 / 6, width = 500;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Column(
         children: [

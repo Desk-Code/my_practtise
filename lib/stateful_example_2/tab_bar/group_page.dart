@@ -10,6 +10,6 @@ class WhatsappGroupPage extends StatefulWidget {
 class _WhatsappGroupPageState extends State<WhatsappGroupPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

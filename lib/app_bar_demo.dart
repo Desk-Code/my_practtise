@@ -26,11 +26,11 @@ class AppBarDemo extends StatelessWidget {
           Icon(Icons.more_vert),
         ],
         // centerTitle: true,
-        bottom: PreferredSize(
-          preferredSize: const Size(double.infinity, 70),
+        bottom: const PreferredSize(
+          preferredSize: Size(double.infinity, 70),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
+            children: [
               Text("Chat"),
               Text("Status"),
               Text("Calls"),

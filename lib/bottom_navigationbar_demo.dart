@@ -10,9 +10,9 @@ class BottomNavigationBarDemo extends StatelessWidget {
       bottomNavigationBar: Container(
         color: Colors.red,
         height: 70,
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
+          children: [
             Icon(Icons.menu),
             Icon(Icons.search),
             Icon(Icons.watch),

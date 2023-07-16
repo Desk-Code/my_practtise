@@ -95,9 +95,9 @@ class Ui10TicketBookingPage extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white.withOpacity(0.3)),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
+              children: [
                 Icon(Icons.account_circle, color: Colors.white),
                 Text(
                   "Biz",
@@ -134,8 +134,8 @@ class Ui10TicketBookingPage extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
                 color: Colors.white70, borderRadius: BorderRadius.circular(25)),
-            child: Row(
-              children: const [
+            child: const Row(
+              children: [
                 SizedBox(width: 7),
                 Icon(
                   Icons.account_circle_sharp,

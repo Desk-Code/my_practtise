@@ -10,9 +10,9 @@ class Ui2Page extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Icon(
                 Icons.menu,
                 color: Colors.deepPurple,
@@ -47,9 +47,9 @@ class Ui2Page extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
                     "Tehran 18°",
                     style: TextStyle(
@@ -73,9 +73,9 @@ class Ui2Page extends StatelessWidget {
               color: Colors.deepPurple[100],
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   "Search or Type Web Address",
                   style: TextStyle(
@@ -418,14 +418,14 @@ class Ui2Page extends StatelessWidget {
                 const SizedBox(
                   width: 15,
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "9 to 5 Mac",
                     ),
-                    const Text(
+                    Text(
                       "Everthing New in ios 15:",
                       style: TextStyle(
                         color: Colors.deepPurple,
@@ -433,10 +433,10 @@ class Ui2Page extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    const Text(
+                    Text(
                       "App Privacy Report and",
                     ),
-                    const Text(
+                    Text(
                       "Auto Call Updates",
                     ),
                     SizedBox(
@@ -447,12 +447,12 @@ class Ui2Page extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
-                              children: const [
+                              children: [
                                 Icon(Icons.favorite_outline),
                                 Icon(Icons.bookmark_border),
                               ],
                             ),
-                            const Text("1 day ago"),
+                            Text("1 day ago"),
                           ]),
                     ),
                   ],

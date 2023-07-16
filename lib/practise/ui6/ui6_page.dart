@@ -13,9 +13,9 @@ class Ui6Page extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: const [
+            children: [
               Text(
                 "Sign Up",
                 style: TextStyle(
@@ -60,10 +60,10 @@ class Ui6Page extends StatelessWidget {
               ),
             ),
           ),
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               SizedBox(
                 height: 30,
                 width: 20,
@@ -116,10 +116,10 @@ class Ui6Page extends StatelessWidget {
               ],
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
-            children: const [
+            children: [
               SizedBox(
                 height: 30,
                 width: 20,
@@ -149,10 +149,10 @@ class Ui6Page extends StatelessWidget {
               ],
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
-            children: const [
+            children: [
               SizedBox(
                 height: 30,
                 width: 20,
@@ -232,9 +232,9 @@ class Ui6Page extends StatelessWidget {
               )
             ],
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               SizedBox(
                 height: 50,
                 width: 20,

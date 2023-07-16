@@ -174,8 +174,8 @@ class Ui11HomePage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Text(
                                 "\$9.43",
                                 style: TextStyle(
@@ -192,8 +192,8 @@ class Ui11HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Icon(
                                 Icons.star,
                                 color: Colors.white,
@@ -228,9 +228,9 @@ class Ui11HomePage extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: const [
+                              children: [
                                 SizedBox(width: 10),
                                 Icon(
                                   Icons.shopping_cart,
