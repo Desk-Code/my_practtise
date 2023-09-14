@@ -72,6 +72,7 @@ class TicToeTac {
   //     await clearControl();
   //   }
   // }
+
   static Future<void> winnerState(context) async {
     int choice = value[0] == value[1] &&
                 value[1] == value[2] &&
@@ -104,17 +105,3 @@ class TicToeTac {
     }
   }
 }
-
-
-
-  // _chooseRandom() {
-  //   var random = new Random();
-  //   while (true) {
-  //     var _row = random.nextInt(3);
-  //     var _column = random.nextInt(3);
-
-  //     if (_field[_row][_column].isEmpty) {
-  //       _decision = new Decision(_row, _column);
-  //       break;
-  //     }
-  //   }
